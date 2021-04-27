@@ -1,0 +1,1 @@
+xst -intstyle ise -ifn "C:/Users/XingyouLee/OneDrive/Program/VHDL/MiniCPU/PC.xst" -ofn "C:/Users/XingyouLee/OneDrive/Program/VHDL/MiniCPU/PC.syr" 

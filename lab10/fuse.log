@@ -1,0 +1,25 @@
+Running: F:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -lib secureip -o C:/Users/XingyouLee/OneDrive/Program/VHDL/lab10/testfft2d_isim_beh.exe -prj C:/Users/XingyouLee/OneDrive/Program/VHDL/lab10/testfft2d_beh.prj work.testfft2d 
+ISim P.20131013 (signature 0x7708f090)
+Number of CPUs detected in this system: 12
+Turning on mult-threading, number of parallel sub-compilation jobs: 24 
+Determining compilation order of HDL files
+Parsing VHDL file "C:/Users/XingyouLee/OneDrive/Program/VHDL/lab10/fft16_pkg.vhd" into library work
+Parsing VHDL file "C:/Users/XingyouLee/OneDrive/Program/VHDL/lab10/butterfly.vhd" into library work
+Parsing VHDL file "C:/Users/XingyouLee/OneDrive/Program/VHDL/lab10/fft16.vhd" into library work
+Parsing VHDL file "C:/Users/XingyouLee/OneDrive/Program/VHDL/lab10/fft2d.vhd" into library work
+Parsing VHDL file "C:/Users/XingyouLee/OneDrive/Program/VHDL/lab10/test22.vhd" into library work
+Starting static elaboration
+Completed static elaboration
+Compiling package standard
+Compiling package std_logic_1164
+Compiling package math_real
+Compiling package fft16_pkg
+Compiling architecture behavioral of entity butterfly [butterfly_default]
+Compiling architecture behavioral of entity fft16 [fft16_default]
+Compiling architecture behavioral of entity fft2d [fft2d_default]
+Compiling architecture behavior of entity testfft2d
+Time Resolution for simulation is 1ps.
+Compiled 11 VHDL Units
+Built simulation executable C:/Users/XingyouLee/OneDrive/Program/VHDL/lab10/testfft2d_isim_beh.exe
+Fuse Memory Usage: 38888 KB
+Fuse CPU Usage: 733 ms

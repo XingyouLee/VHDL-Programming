@@ -1,0 +1,1 @@
+xst -intstyle ise -ifn "C:/kkk/kk.xst" -ofn "C:/kkk/kk.syr" 

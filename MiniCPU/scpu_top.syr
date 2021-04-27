@@ -1,0 +1,215 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.34 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.34 secs
+ 
+--> Reading design: scpu_top.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "scpu_top.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "scpu_top"
+Output Format                      : NGC
+Target Device                      : xc7a100t-3-csg324
+
+---- Source Options
+Top Module Name                    : scpu_top
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 32
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Parsing VHDL file "C:\Users\XingyouLee\OneDrive\Program\VHDL\MiniCPU\WriteData_mux.vhd" into library work
+Parsing entity <WriteData_mux>.
+Parsing architecture <Behavioral> of entity <writedata_mux>.
+Parsing VHDL file "C:\Users\XingyouLee\OneDrive\Program\VHDL\MiniCPU\SignExtend.vhd" into library work
+Parsing entity <SignExtend>.
+Parsing architecture <Behavioral> of entity <signextend>.
+Parsing VHDL file "C:\Users\XingyouLee\OneDrive\Program\VHDL\MiniCPU\ShiftImmLeft.vhd" into library work
+Parsing entity <ShiftImmLeft>.
+Parsing architecture <Behavioral> of entity <shiftimmleft>.
+Parsing VHDL file "C:\Users\XingyouLee\OneDrive\Program\VHDL\MiniCPU\registers.vhd" into library work
+Parsing entity <registers>.
+Parsing architecture <registers_arch> of entity <registers>.
+Parsing VHDL file "C:\Users\XingyouLee\OneDrive\Program\VHDL\MiniCPU\RegDst_mux.vhd" into library work
+Parsing entity <RegDst_mux>.
+Parsing architecture <Behavioral> of entity <regdst_mux>.
+Parsing VHDL file "C:\Users\XingyouLee\OneDrive\Program\VHDL\MiniCPU\PCadd4.vhd" into library work
+Parsing entity <PCadd4>.
+Parsing architecture <Behavioral> of entity <pcadd4>.
+Parsing VHDL file "C:\Users\XingyouLee\OneDrive\Program\VHDL\MiniCPU\PC.vhd" into library work
+Parsing entity <PC>.
+Parsing architecture <Behavioral> of entity <pc>.
+Parsing VHDL file "C:\Users\XingyouLee\OneDrive\Program\VHDL\MiniCPU\Jump_mux.vhd" into library work
+Parsing entity <Jump_mux>.
+Parsing architecture <Behavioral> of entity <jump_mux>.
+Parsing VHDL file "C:\Users\XingyouLee\OneDrive\Program\VHDL\MiniCPU\JumpAddressShift.vhd" into library work
+Parsing entity <JumpAddressShift>.
+Parsing architecture <Behavioral> of entity <jumpaddressshift>.
+Parsing VHDL file "C:\Users\XingyouLee\OneDrive\Program\VHDL\MiniCPU\JumpAddrCon.vhd" into library work
+Parsing entity <JumpAddrCon>.
+Parsing architecture <Behavioral> of entity <jumpaddrcon>.
+Parsing VHDL file "C:\Users\XingyouLee\OneDrive\Program\VHDL\MiniCPU\ControlSignalGeneration.vhd" into library work
+Parsing entity <ControlSignalGeneration>.
+Parsing architecture <Behavioral> of entity <controlsignalgeneration>.
+Parsing VHDL file "C:\Users\XingyouLee\OneDrive\Program\VHDL\MiniCPU\CheckBranch.vhd" into library work
+Parsing entity <CheckBranch>.
+Parsing architecture <Behavioral> of entity <checkbranch>.
+Parsing VHDL file "C:\Users\XingyouLee\OneDrive\Program\VHDL\MiniCPU\Branch_mux.vhd" into library work
+Parsing entity <Branch_mux>.
+Parsing architecture <Behavioral> of entity <branch_mux>.
+Parsing VHDL file "C:\Users\XingyouLee\OneDrive\Program\VHDL\MiniCPU\BranchAddressAdder.vhd" into library work
+Parsing entity <BranchAddressAdder>.
+Parsing architecture <Behavioral> of entity <branchaddressadder>.
+Parsing VHDL file "C:\Users\XingyouLee\OneDrive\Program\VHDL\MiniCPU\ALU_mux.vhd" into library work
+Parsing entity <ALU_mux>.
+Parsing architecture <Behavioral> of entity <alu_mux>.
+Parsing VHDL file "C:\Users\XingyouLee\OneDrive\Program\VHDL\MiniCPU\ALUcontrol.vhd" into library work
+Parsing entity <ALUcontrol>.
+Parsing architecture <Behavioral> of entity <alucontrol>.
+Parsing VHDL file "C:\Users\XingyouLee\OneDrive\Program\VHDL\MiniCPU\ALU.vhd" into library work
+Parsing entity <ALU>.
+Parsing architecture <Behavioral> of entity <alu>.
+Parsing VHDL file "C:\Users\XingyouLee\OneDrive\Program\VHDL\MiniCPU\scpu.vhd" into library work
+Parsing entity <scpu>.
+Parsing architecture <Behavioral> of entity <scpu>.
+Parsing VHDL file "C:\Users\XingyouLee\OneDrive\Program\VHDL\MiniCPU\imem.vhd" into library work
+Parsing entity <imem>.
+Parsing architecture <imem_arch> of entity <imem>.
+Parsing VHDL file "C:\Users\XingyouLee\OneDrive\Program\VHDL\MiniCPU\dmem.vhd" into library work
+Parsing entity <dmem>.
+Parsing architecture <dmem_arch> of entity <dmem>.
+Parsing VHDL file "C:\Users\XingyouLee\OneDrive\Program\VHDL\MiniCPU\scpu_top.vhd" into library work
+Parsing entity <scpu_top>.
+Parsing architecture <Behavioral> of entity <scpu_top>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating entity <scpu_top> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <scpu> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <PC> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <RegDst_mux> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <registers> (architecture <registers_arch>) from library <work>.
+
+Elaborating entity <ALU_mux> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <ALU> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <WriteData_mux> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <SignExtend> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <ALUcontrol> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <ControlSignalGeneration> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <PCadd4> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <ShiftImmLeft> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <CheckBranch> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <BranchAddressAdder> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <Branch_mux> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <Jump_mux> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <JumpAddressShift> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <JumpAddrCon> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <imem> (architecture <imem_arch>) with generics from library <work>.
+ERROR:Portability:3 - This Xilinx application has run out of memory or has encountered a memory conflict.  Current memory usage is 21794348 kb.  You can try increasing your system's physical or virtual memory.  If you are using a Win32 system, you can increase your application memory from 2GB to 3GB using the /3G switch in your boot.ini file. For more information on this, please refer to Xilinx Answer Record #14932. For technical support on this issue, please visit http://www.xilinx.com/support. 

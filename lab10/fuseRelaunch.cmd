@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "secureip" -o "C:/Users/XingyouLee/OneDrive/Program/VHDL/lab10/testfft2d_isim_beh.exe" -prj "C:/Users/XingyouLee/OneDrive/Program/VHDL/lab10/testfft2d_beh.prj" "work.testfft2d" 

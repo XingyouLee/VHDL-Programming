@@ -1,0 +1,5 @@
+vhdl work "myxor.vhd"
+vhdl work "myand.vhd"
+vhdl work "myor.vhd"
+vhdl work "myHA.vhd"
+vhdl work "FA.vhd"

@@ -1,0 +1,8 @@
+xst -intstyle ise -ifn "C:/Users/XingyouLee/OneDrive/Program/VHDL/lab3/convert_b_to_g.xst" -ofn "C:/Users/XingyouLee/OneDrive/Program/VHDL/lab3/convert_b_to_g.syr" 
+xst -intstyle ise -ifn "C:/Users/XingyouLee/OneDrive/Program/VHDL/lab3/convert_b_to_g.xst" -ofn "C:/Users/XingyouLee/OneDrive/Program/VHDL/lab3/convert_b_to_g.syr" 
+xst -intstyle ise -ifn "C:/Users/XingyouLee/OneDrive/Program/VHDL/lab3/convert_b_to_g.xst" -ofn "C:/Users/XingyouLee/OneDrive/Program/VHDL/lab3/convert_b_to_g.syr" 
+xst -intstyle ise -ifn "C:/Users/XingyouLee/OneDrive/Program/VHDL/lab3/convert_b_to_g.xst" -ofn "C:/Users/XingyouLee/OneDrive/Program/VHDL/lab3/convert_b_to_g.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc7a100t-csg324-3 convert_b_to_g.ngc convert_b_to_g.ngd  
+map -intstyle ise -p xc7a100t-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o convert_b_to_g_map.ncd convert_b_to_g.ngd convert_b_to_g.pcf 
+par -w -intstyle ise -ol high -mt off convert_b_to_g_map.ncd convert_b_to_g.ncd convert_b_to_g.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml convert_b_to_g.twx convert_b_to_g.ncd -o convert_b_to_g.twr convert_b_to_g.pcf 

@@ -1,0 +1,20 @@
+xst -intstyle ise -ifn "C:/Users/XingyouLee/OneDrive/Program/VHDL/multi/multicyclefsm.xst" -ofn "C:/Users/XingyouLee/OneDrive/Program/VHDL/multi/multicyclefsm.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc7a100t-csg324-3 multicyclefsm.ngc multicyclefsm.ngd  
+map -intstyle ise -p xc7a100t-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o multicyclefsm_map.ncd multicyclefsm.ngd multicyclefsm.pcf 
+xst -intstyle ise -ifn "C:/Users/XingyouLee/OneDrive/Program/VHDL/multi/multicyclefsm.xst" -ofn "C:/Users/XingyouLee/OneDrive/Program/VHDL/multi/multicyclefsm.syr" 
+xst -intstyle ise -ifn "C:/Users/XingyouLee/OneDrive/Program/VHDL/multi/multicyclefsm.xst" -ofn "C:/Users/XingyouLee/OneDrive/Program/VHDL/multi/multicyclefsm.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc7a100t-csg324-3 multicyclefsm.ngc multicyclefsm.ngd  
+map -intstyle ise -p xc7a100t-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o multicyclefsm_map.ncd multicyclefsm.ngd multicyclefsm.pcf 
+map -intstyle ise -p xc7a100t-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o multicyclefsm_map.ncd multicyclefsm.ngd multicyclefsm.pcf 
+map -intstyle ise -p xc7a100t-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o multicyclefsm_map.ncd multicyclefsm.ngd multicyclefsm.pcf 
+par -w -intstyle ise -ol high -mt off multicyclefsm_map.ncd multicyclefsm.ncd multicyclefsm.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml multicyclefsm.twx multicyclefsm.ncd -o multicyclefsm.twr multicyclefsm.pcf 
+xst -intstyle ise -ifn "C:/Users/XingyouLee/OneDrive/Program/VHDL/multi/multicyclefsm.xst" -ofn "C:/Users/XingyouLee/OneDrive/Program/VHDL/multi/multicyclefsm.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc7a100t-csg324-3 multicyclefsm.ngc multicyclefsm.ngd  
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc7a100t-csg324-3 multicyclefsm.ngc multicyclefsm.ngd  
+map -intstyle ise -p xc7a100t-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o multicyclefsm_map.ncd multicyclefsm.ngd multicyclefsm.pcf 
+map -intstyle ise -p xc7a100t-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o multicyclefsm_map.ncd multicyclefsm.ngd multicyclefsm.pcf 
+xst -intstyle ise -ifn "C:/Users/XingyouLee/OneDrive/Program/VHDL/multi/multicyclefsm.xst" -ofn "C:/Users/XingyouLee/OneDrive/Program/VHDL/multi/multicyclefsm.syr" 
+xst -intstyle ise -ifn "C:/Users/XingyouLee/OneDrive/Program/VHDL/multi/multicyclefsm.xst" -ofn "C:/Users/XingyouLee/OneDrive/Program/VHDL/multi/multicyclefsm.syr" 
+xst -intstyle ise -ifn "C:/Users/XingyouLee/OneDrive/Program/VHDL/multi/multicyclefsm.xst" -ofn "C:/Users/XingyouLee/OneDrive/Program/VHDL/multi/multicyclefsm.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc7a100t-csg324-3 multicyclefsm.ngc multicyclefsm.ngd  

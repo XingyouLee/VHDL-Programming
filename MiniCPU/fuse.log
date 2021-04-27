@@ -1,0 +1,64 @@
+Running: fuse.exe -relaunch -intstyle "ise" -incremental -lib "secureip" -o "C:/Users/XingyouLee/OneDrive/Program/VHDL/MiniCPU/scpu_tb_isim_beh.exe" -prj "C:/Users/XingyouLee/OneDrive/Program/VHDL/MiniCPU/scpu_tb_beh.prj" "work.scpu_tb" 
+ISim P.20131013 (signature 0x7708f090)
+Number of CPUs detected in this system: 12
+Turning on mult-threading, number of parallel sub-compilation jobs: 24 
+Determining compilation order of HDL files
+Parsing VHDL file "C:/Users/XingyouLee/OneDrive/Program/VHDL/MiniCPU/WriteData_mux.vhd" into library work
+Parsing VHDL file "C:/Users/XingyouLee/OneDrive/Program/VHDL/MiniCPU/SignExtend.vhd" into library work
+Parsing VHDL file "C:/Users/XingyouLee/OneDrive/Program/VHDL/MiniCPU/ShiftImmLeft.vhd" into library work
+Parsing VHDL file "C:/Users/XingyouLee/OneDrive/Program/VHDL/MiniCPU/registers.vhd" into library work
+Parsing VHDL file "C:/Users/XingyouLee/OneDrive/Program/VHDL/MiniCPU/RegDst_mux.vhd" into library work
+Parsing VHDL file "C:/Users/XingyouLee/OneDrive/Program/VHDL/MiniCPU/PCadd4.vhd" into library work
+Parsing VHDL file "C:/Users/XingyouLee/OneDrive/Program/VHDL/MiniCPU/PC.vhd" into library work
+Parsing VHDL file "C:/Users/XingyouLee/OneDrive/Program/VHDL/MiniCPU/Jump_mux.vhd" into library work
+Parsing VHDL file "C:/Users/XingyouLee/OneDrive/Program/VHDL/MiniCPU/JumpAddressShift.vhd" into library work
+Parsing VHDL file "C:/Users/XingyouLee/OneDrive/Program/VHDL/MiniCPU/JumpAddrCon.vhd" into library work
+Parsing VHDL file "C:/Users/XingyouLee/OneDrive/Program/VHDL/MiniCPU/ControlSignalGeneration.vhd" into library work
+Parsing VHDL file "C:/Users/XingyouLee/OneDrive/Program/VHDL/MiniCPU/CheckBranch.vhd" into library work
+Parsing VHDL file "C:/Users/XingyouLee/OneDrive/Program/VHDL/MiniCPU/Branch_mux.vhd" into library work
+Parsing VHDL file "C:/Users/XingyouLee/OneDrive/Program/VHDL/MiniCPU/BranchAddressAdder.vhd" into library work
+Parsing VHDL file "C:/Users/XingyouLee/OneDrive/Program/VHDL/MiniCPU/ALU_mux.vhd" into library work
+Parsing VHDL file "C:/Users/XingyouLee/OneDrive/Program/VHDL/MiniCPU/ALUcontrol.vhd" into library work
+Parsing VHDL file "C:/Users/XingyouLee/OneDrive/Program/VHDL/MiniCPU/ALU.vhd" into library work
+Parsing VHDL file "C:/Users/XingyouLee/OneDrive/Program/VHDL/MiniCPU/scpu.vhd" into library work
+Parsing VHDL file "C:/Users/XingyouLee/OneDrive/Program/VHDL/MiniCPU/imem.vhd" into library work
+Parsing VHDL file "C:/Users/XingyouLee/OneDrive/Program/VHDL/MiniCPU/dmem.vhd" into library work
+Parsing VHDL file "C:/Users/XingyouLee/OneDrive/Program/VHDL/MiniCPU/scpu_top.vhd" into library work
+Parsing VHDL file "C:/Users/XingyouLee/OneDrive/Program/VHDL/MiniCPU/scpu_tb.vhd" into library work
+Starting static elaboration
+Completed static elaboration
+Compiling package standard
+Compiling package std_logic_1164
+Compiling package std_logic_arith
+Compiling package std_logic_unsigned
+Compiling package numeric_std
+Compiling package textio
+Compiling package std_logic_textio
+Compiling architecture imem_arch of entity imem [\imem("program.asc")(1,11)\]
+Compiling architecture dmem_arch of entity dmem [dmem_default]
+Compiling architecture behavioral of entity PC [pc_default]
+Compiling architecture behavioral of entity RegDst_mux [regdst_mux_default]
+Compiling architecture registers_arch of entity registers [registers_default]
+Compiling architecture behavioral of entity ALU_mux [alu_mux_default]
+Compiling architecture behavioral of entity ALU [alu_default]
+Compiling architecture behavioral of entity WriteData_mux [writedata_mux_default]
+Compiling architecture behavioral of entity SignExtend [signextend_default]
+Compiling architecture behavioral of entity ALUcontrol [alucontrol_default]
+Compiling architecture behavioral of entity ControlSignalGeneration [controlsignalgeneration_default]
+Compiling architecture behavioral of entity PCadd4 [pcadd4_default]
+Compiling architecture behavioral of entity ShiftImmLeft [shiftimmleft_default]
+Compiling architecture behavioral of entity CheckBranch [checkbranch_default]
+Compiling architecture behavioral of entity BranchAddressAdder [branchaddressadder_default]
+Compiling architecture behavioral of entity Branch_mux [branch_mux_default]
+Compiling architecture behavioral of entity Jump_mux [jump_mux_default]
+Compiling architecture behavioral of entity JumpAddressShift [jumpaddressshift_default]
+Compiling architecture behavioral of entity JumpAddrCon [jumpaddrcon_default]
+Compiling architecture behavioral of entity scpu [scpu_default]
+Compiling architecture behavioral of entity scpu_top [scpu_top_default]
+Compiling architecture scpu_tb_arch of entity scpu_tb
+Time Resolution for simulation is 1ps.
+Waiting for 3 sub-compilation(s) to finish...
+Compiled 50 VHDL Units
+Built simulation executable C:/Users/XingyouLee/OneDrive/Program/VHDL/MiniCPU/scpu_tb_isim_beh.exe
+Fuse Memory Usage: 41788 KB
+Fuse CPU Usage: 1202 ms

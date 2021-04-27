@@ -1,0 +1,28 @@
+Command line:
+   convert_g_to_b_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  8066
+
+Sat Feb 13 19:57:17 2021
+
+
+ Elaboration Time: 0.078125 sec
+
+ Current Memory Usage: 5159.99 Meg
+
+ Total Signals          : 3
+ Total Nets             : 12
+ Total Signal Drivers   : 1
+ Total Blocks           : 5
+ Total Primitive Blocks : 5
+ Total Processes        : 1
+ Total Traceable Variables  : 15
+ Total Scalar Nets and Variables : 513
+
+ Total Simulation Time: 0.109375 sec
+
+ Current Memory Usage: 5002.7 Meg
+
+Sat Feb 13 20:02:26 2021
+

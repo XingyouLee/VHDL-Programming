@@ -1,0 +1,39 @@
+ISim log file
+Running: C:\Users\XingyouLee\OneDrive\Program\VHDL\lab3\convert_g_to_b_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb C:/Users/XingyouLee/OneDrive/Program/VHDL/lab3/convert_g_to_b_isim_beh.wdb 
+ISim P.20131013 (signature 0x7708f090)
+This is a Full version of ISim.
+Time resolution is 1 ps
+# onerror resume
+# wave add /
+# run 1000 ns
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+# restart
+# put G 0 -radix dec
+# put G 1 -radix dec
+# put G 2 -radix dec
+# put G 0 -radix dec
+# run 5ps
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+# put G 1 -radix dec
+# put D 0 -radix dec
+D: No such HDL object
+# put G 1 -radix dec
+# run 5ps
+# put G 2 -radix dec
+# run 5ps
+# put G 3 -radix dec
+# run 5ps
+# put G 4 -radix dec
+# run 5ps
+# put G 5 -radix dec
+# run 5ps
+# put G 6 -radix dec
+# run 5ps
+# put G 7 -radix dec
+# run 5ps
+# put G 8 -radix dec
+# run 5ps
+# put G 9 -radix dec
+# run 5ps

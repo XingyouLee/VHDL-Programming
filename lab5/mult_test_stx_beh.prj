@@ -1,0 +1,2 @@
+vhdl isim_temp "mult.vhd"
+vhdl isim_temp "multtest.vhd"

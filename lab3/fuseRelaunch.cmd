@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "secureip" -o "C:/Users/XingyouLee/OneDrive/Program/VHDL/lab3/convert_g_to_b_isim_beh.exe" -prj "C:/Users/XingyouLee/OneDrive/Program/VHDL/lab3/convert_g_to_b_beh.prj" "work.convert_g_to_b" 

@@ -1,0 +1,45 @@
+ISim log file
+Running: C:\Users\XingyouLee\OneDrive\Program\VHDL\FullAdder\myFA_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb C:/Users/XingyouLee/OneDrive/Program/VHDL/FullAdder/myFA_isim_beh.wdb 
+ISim P.20131013 (signature 0x7708f090)
+This is a Full version of ISim.
+Time resolution is 1 ps
+# onerror resume
+# wave add /
+# run 1000 ns
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+# restart
+# put a -radix 0
+# put b -radix 0
+# put cin -radix 0
+# run 3ps
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+# restart
+# put a 0 -radix dec
+# put b 0 -radix
+# put cin 0 -radix
+# run 3ps
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+# put cin 1 -radix
+# run 3ps
+# put b 1 -radix
+# put cin 0 -radix
+# run 3ps
+# put cin 1 -radix
+# run 3ps
+# put a 1 -radix
+# put b 1 -radix
+# put b 0 -radix
+# put c 0 -radix
+c: No such HDL object
+# put cin 0 -radix
+# run 3ps
+# put cin 1 -radix
+# run 3ps
+# put b 1 -radix
+# put cin 0 -radix
+# run 3ps
+# put cin 1 -radix
+# run 3ps

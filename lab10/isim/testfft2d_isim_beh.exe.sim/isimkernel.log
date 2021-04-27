@@ -1,0 +1,28 @@
+Command line:
+   testfft2d_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  2321
+
+Fri Apr 16 18:02:12 2021
+
+
+ Elaboration Time: 0.125 sec
+
+ Current Memory Usage: 5200.92 Meg
+
+ Total Signals          : 6383
+ Total Nets             : 8706
+ Total Signal Drivers   : 2564
+ Total Blocks           : 1637
+ Total Primitive Blocks : 1539
+ Total Processes        : 2564
+ Total Traceable Variables  : 741
+ Total Scalar Nets and Variables : 10725
+
+ Total Simulation Time: 0.171875 sec
+
+ Current Memory Usage: 5043.64 Meg
+
+Fri Apr 16 21:24:22 2021
+

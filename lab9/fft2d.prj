@@ -1,0 +1,4 @@
+vhdl work "fft16_pkg.vhd"
+vhdl work "butterfly.vhd"
+vhdl work "fft16.vhd"
+vhdl work "fft2d.vhd"
