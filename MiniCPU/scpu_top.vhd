@@ -34,8 +34,7 @@ use IEEE.NUMERIC_STD.ALL;
 
 entity scpu_top is
     Port ( clk : in  STD_LOGIC;
-           reset : in  STD_LOGIC;
-           hang : out  STD_LOGIC);
+           reset : in  STD_LOGIC);
 end scpu_top;
 
 architecture Behavioral of scpu_top is
@@ -49,8 +48,7 @@ component scpu
 			  ddatain : out std_logic_vector(31 downto 0);
 			  ddataout : in std_logic_vector(31 downto 0);
 			  oe : out std_logic;
-			  we : out std_logic;
-			  hang : out  STD_LOGIC);
+			  we : out std_logic);
 end component;
 
 component imem
@@ -112,8 +110,7 @@ scpu0 : scpu port map(
 			ddatain => m_ddatain_s,
 			ddataout => m_ddataout_s,
 			oe => m_oe_s,
-			we => m_we_s,
-			hang => hang
+			we => m_we_s
 );
 
 

@@ -32,8 +32,7 @@ use IEEE.STD_LOGIC_1164.ALL;
 entity ALUcontrol is
     Port ( funct : in  STD_LOGIC_VECTOR (5 downto 0);
            ALUOp : in  STD_LOGIC_VECTOR (2 downto 0);
-           ALUcontrol : out  STD_LOGIC_VECTOR (2 downto 0);
-		   hang_funct : out  STD_LOGIC);
+           ALUcontrol : out  STD_LOGIC_VECTOR (2 downto 0));
 end ALUcontrol;
 
 architecture Behavioral of ALUcontrol is
@@ -53,11 +52,5 @@ begin
 						"100" when (ALUOp = "111")and (funct = "100100") else --R type--and
 						"101" when (ALUOp = "111")and (funct = "100101") else --R type--or
 						"UUU";
-	hang_funct <= '0' when (ALUOp = "111")and (funct = "100000") else --R type--add
-					'0' when (ALUOp = "111")and (funct = "100010") else --R type--sub
-					'0' when (ALUOp = "111")and (funct = "101010") else --R type--slt
-					'0' when (ALUOp = "111")and (funct = "100100") else --R type--and
-					'0' when (ALUOp = "111")and (funct = "100101") else --R type--or
-					'1';
 end Behavioral;
 

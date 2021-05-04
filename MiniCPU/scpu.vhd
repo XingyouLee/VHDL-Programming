@@ -42,8 +42,7 @@ entity scpu is
 			  ddatain : out std_logic_vector(31 downto 0);
 			  ddataout : in std_logic_vector(31 downto 0);
 			  oe : out std_logic;
-			  we : out std_logic;
-			  hang : out  STD_LOGIC);
+			  we : out std_logic);
 end scpu;
 
 architecture Behavioral of scpu is
@@ -104,8 +103,7 @@ end component;
 component ALUcontrol
     Port ( funct : in  STD_LOGIC_VECTOR (5 downto 0);
            ALUOp : in  STD_LOGIC_VECTOR (2 downto 0);
-           ALUcontrol : out  STD_LOGIC_VECTOR (2 downto 0);
-			  hang_funct : out  STD_LOGIC);
+           ALUcontrol : out  STD_LOGIC_VECTOR (2 downto 0));
 end component;
 
 component ControlSignalGeneration
@@ -118,8 +116,7 @@ component ControlSignalGeneration
            MemWrite : out  STD_LOGIC;
            Branch : out  STD_LOGIC;
            Jump : out  STD_LOGIC;
-           ALUOp : out  STD_LOGIC_VECTOR (2 downto 0);
-			  hang_op : out STD_LOGIC);
+           ALUOp : out  STD_LOGIC_VECTOR (2 downto 0));
 end component;
 
 component PCadd4
@@ -194,8 +191,7 @@ signal out_14_to_15 : STD_LOGIC_VECTOR (31 downto 0);
 signal out_15_to_1 : STD_LOGIC_VECTOR (31 downto 0);
 signal out_16_to_17 : STD_LOGIC_VECTOR (27 downto 0);
 signal out_17_to_15 : STD_LOGIC_VECTOR (31 downto 0);
-signal hang_op : STD_LOGIC;
-signal hang_funct : STD_LOGIC;
+
 
 begin
 
@@ -206,19 +202,6 @@ PC1 : PC port map(
 			out_pc => out_1_to_10
 );
 
--- ControlSignalGeneration9 : ControlSignalGeneration port map(
--- 			op => idata(31 downto 26),
--- 			RegDst => out_9_to_2,
--- 			ALUSrc => out_9_to_4,
--- 			MemtoReg => out_9_to_6,
--- 			RegWrite => out_9_to_3,
--- 			MemRead => oe,
--- 			MemWrite => we,
--- 			Branch => out_9_to_12,
--- 			Jump => out_9_to_15,
--- 			ALUOp => out_9_to_8,
--- 			hang_op => hang_op
--- );
 
 RegDst_mux2 : RegDst_mux port map(
 			RegDst => out_9_to_2,
@@ -269,8 +252,7 @@ SignExtend7 : SignExtend port map(
 ALUcontrol8 : ALUcontrol port map(
 			funct => idata(5 downto 0),
 			ALUOp => out_9_to_8,
-			ALUcontrol => out_8_to_5,
-			hang_funct => hang_funct
+			ALUcontrol => out_8_to_5
 );
 
 ControlSignalGeneration9 : ControlSignalGeneration port map(
@@ -283,8 +265,7 @@ ControlSignalGeneration9 : ControlSignalGeneration port map(
 			MemWrite => we,
 			Branch => out_9_to_12,
 			Jump => out_9_to_15,
-			ALUOp => out_9_to_8,
-			hang_op => hang_op
+			ALUOp => out_9_to_8
 );
 
 PCadd4_10 : PCadd4 port map(
@@ -337,7 +318,7 @@ JumpAddrCon17 : JumpAddrCon port map(
 iaddr <= out_1_to_10;
 ddatain <= out_3_to_4;
 daddr <= out_5_to_6;
-hang <= (hang_op and hang_funct);
+
 
 
 end Behavioral;

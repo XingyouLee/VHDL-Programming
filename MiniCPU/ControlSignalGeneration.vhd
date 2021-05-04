@@ -39,8 +39,7 @@ entity ControlSignalGeneration is
            MemWrite : out  STD_LOGIC;
            Branch : out  STD_LOGIC;
            Jump : out  STD_LOGIC;
-           ALUOp : out  STD_LOGIC_VECTOR (2 downto 0);
-			  hang_op : out STD_LOGIC);
+           ALUOp : out  STD_LOGIC_VECTOR (2 downto 0));
 end ControlSignalGeneration;
 
 architecture Behavioral of ControlSignalGeneration is
@@ -135,14 +134,6 @@ begin
 					"010" when "001010",
 					"000" when "001000",
 					"UUU" when others;
-	with op select
-		hang_op <= '0' when "100011",
-					'0' when "101011",
-					'0' when "000100",
-					'0' when "000010",
-					'0' when "001111",
-					'0' when "001010",
-					'0' when "001000",
-					'1' when others;
+
 end Behavioral;
 

@@ -2,33 +2,26 @@ Command line:
    scpu_tb_isim_beh.exe
      -simmode  gui
      -simrunnum  0
-     -socket  4173
+     -socket  5172
 
-Mon Apr 26 20:44:31 2021
+Tue May 04 15:31:47 2021
 
 
  Elaboration Time: 0.09375 sec
 
- Current Memory Usage: 5159.48 Meg
+ Current Memory Usage: 5159.5 Meg
 
- Total Signals          : 134
- Total Nets             : 664
- Total Signal Drivers   : 39
+ Total Signals          : 127
+ Total Nets             : 661
+ Total Signal Drivers   : 36
  Total Blocks           : 28
  Total Primitive Blocks : 25
- Total Processes        : 38
+ Total Processes        : 35
  Total Traceable Variables  : 24
- Total Scalar Nets and Variables : 1702
+ Total Scalar Nets and Variables : 1699
 
 ** Failure:Assertion violation
 User(VHDL) Code Called Simulation Stop
 In process dmem.vhd:27 
  
-
-
- Total Simulation Time: 0.25 sec
-
- Current Memory Usage: 4687.62 Meg
-
-Thu Apr 29 00:33:26 2021
 

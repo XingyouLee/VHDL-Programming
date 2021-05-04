@@ -11,14 +11,13 @@ architecture scpu_tb_arch of scpu_tb is
   
 COMPONENT scpu_top PORT (
         clk : in STD_LOGIC;
-        reset : in STD_LOGIC;
-        hang : out  STD_LOGIC);
+        reset : in STD_LOGIC);
 end COMPONENT;
 
 
 signal clk : STD_LOGIC;
 signal reset : std_logic;
-signal hang : STD_LOGIC;
+
 
 begin
    
@@ -42,8 +41,7 @@ begin
 
    scpu0: scpu_top port map (
        clk   => clk,
-       reset => reset,
-       hang => hang);
+       reset => reset);
 
 
 end scpu_tb_arch;
