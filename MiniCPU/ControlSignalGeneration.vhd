@@ -53,6 +53,7 @@ begin
 					'0' when "001111", -- lui
 					'0' when "001010", -- slti
 					'0' when "001000", -- I type
+					'0' when "001011", -- sltiu
 					'U' when others;
 	with op select
 		ALUSrc <= '0' when "000000",
@@ -63,6 +64,7 @@ begin
 					'1' when "001111",
 					'1' when "001010",
 					'1' when "001000",
+					'1' when "001011",
 					'U' when others;
 	with op select
 		MemtoReg <= '0' when "000000",
@@ -73,6 +75,7 @@ begin
 					'0' when "001111",
 					'0' when "001010",
 					'0' when "001000",
+					'0' when "001011",
 					'U' when others;
 	with op select
 		RegWrite <= '1' when "000000",
@@ -83,6 +86,7 @@ begin
 					'1' when "001111",
 					'1' when "001010",
 					'1' when "001000",
+					'1' when "001011",
 					'U' when others;
 	with op select
 		MemRead <= '0' when "000000",
@@ -93,6 +97,7 @@ begin
 					'X' when "001111",
 					'X' when "001010",
 					'X' when "001000",
+					'X' when "001011",
 					'U' when others;
 	with op select
 		MemWrite <= '0' when "000000",
@@ -103,6 +108,7 @@ begin
 					'0' when "001111",
 					'0' when "001010",
 					'0' when "001000",
+					'0' when "001011",
 					'U' when others;
 	with op select
 		Branch <= '0' when "000000",
@@ -113,6 +119,7 @@ begin
 					'0' when "001111",
 					'0' when "001010",
 					'0' when "001000",
+					'0' when "001011",
 					'U' when others;
 	with op select
 		Jump <= '0' when "000000",
@@ -123,6 +130,7 @@ begin
 					'0' when "001111",
 					'0' when "001010",
 					'0' when "001000",
+					'0' when "001011",
 					'U' when others;
 	with op select
 		ALUOp <= "111" when "000000",
@@ -131,9 +139,12 @@ begin
 					"001" when "000100", -- sub
 					"000" when "000010", -- add
 					"110" when "001111", -- shift
-					"010" when "001010", -- set less than
+					"010" when "001010", -- slti
 					"000" when "001000", -- add
+					-- "010" when "101010", -- slt
+					-- "011" when "101011", -- sltu
+					"111" when "001011", -- sltiu
 					"UUU" when others;
-
+					
 end Behavioral;
 

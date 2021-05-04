@@ -90,16 +90,6 @@ port map(
 			idata => i_idata_s
 );
 
-dmem2 : dmem port map(
-			clk => clk,
-			reset => reset,
-			daddr => m_daddr_s,
-			ddatain => m_ddatain_s,
-			ddataout => m_ddataout_s,
-			oe => m_oe_s,
-			we => m_we_s
-);
-
 
 scpu0 : scpu port map(
 			clk => clk,
@@ -112,6 +102,17 @@ scpu0 : scpu port map(
 			oe => m_oe_s,
 			we => m_we_s
 );
+
+dmem2 : dmem port map(
+			clk => clk,
+			reset => reset,
+			daddr => m_daddr_s,
+			ddatain => m_ddatain_s,
+			ddataout => m_ddataout_s,
+			oe => m_oe_s,
+			we => m_we_s
+);
+
 
 
 end Behavioral;

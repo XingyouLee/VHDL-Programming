@@ -1,5 +1,5 @@
 ISim log file
-Running: C:\Users\XingyouLee\OneDrive\mult\mult\multtest_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb C:/Users/XingyouLee/OneDrive/mult/mult/multtest_isim_beh.wdb 
+Running: C:\Users\XingyouLee\OneDrive\Program\VHDL\lab5\mult_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb C:/Users/XingyouLee/OneDrive/Program/VHDL/lab5/mult_isim_beh.wdb 
 ISim P.20131013 (signature 0x7708f090)
 This is a Full version of ISim.
 Time resolution is 1 ps
@@ -8,3 +8,26 @@ Time resolution is 1 ps
 # run 1000 ns
 Simulator is doing circuit initialization process.
 Finished circuit initialization process.
+# restart
+# put a -3 -radix dec
+a: Illegal literal for enumeration type
+# put a -3 -radix signed decimal
+Incorrect usage of command 'put'
+Usage: put <hdl_object_name> <value> [-radix <type>]
+for detailed help use 'help put'
+# help put
+Usage: put <hdl_object_name> <value> [-radix <type>]
+    Assigns a value to an HDL signal, reg, or variable.
+    '-radix' may be used to specify the radix of the provided value.
+    Possible values for radix are: default, dec, bin, oct, hex, unsigned,
+    or ascii.
+# put a -3 -radix dec
+a: Illegal literal for enumeration type
+# put a 3 -radix dec
+# put a 11111111111111111111111111111100
+# put b 3 -radix dec
+# run 10 ns
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+# put b (-3) -radix dec
+b: Could not convert given string value (-3) to an appropriate value.

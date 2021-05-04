@@ -18,7 +18,7 @@ end dmem;
 architecture dmem_arch of dmem is
 
 	constant mbegin: natural := 0;				-- in #word
-	constant mend: natural := 16384-1;			-- in #word, 16K Words = 64K Bytes
+	constant mend: natural := 16384*16-1;			-- in #word, 16K Words = 64K Bytes
 	subtype word is std_logic_vector(31 downto 0);
 	type memory is array (natural range mbegin to mend) of word;
 
@@ -34,13 +34,13 @@ begin
 
 				if ((daddr > (mend+1)*4-4 or daddr < mbegin*4)
 				and (oe = '1' or we = '1')) then
-					--write(output, "daddr out of range");
+					write(output, "daddr out of range");
 					assert false severity failure;
 				end if;
 				if (daddr(1 downto 0) /= "00"
 				and (oe = '1' or we = '1')) then
-					--write(output, "daddr unaligned access");
-					assert false severity failure;
+					write(output, "daddr unaligned access");
+					--assert false severity failure;
 				end if;
 			
 				da := conv_integer(unsigned(daddr(31 downto 2)));

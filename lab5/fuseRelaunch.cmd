@@ -1,1 +1,1 @@
--intstyle "ise" -incremental -lib "secureip" -o "C:/Users/XingyouLee/OneDrive/mult/mult/multtest_isim_beh.exe" -prj "C:/Users/XingyouLee/OneDrive/mult/mult/multtest_beh.prj" "work.multtest" 
+-intstyle "ise" -incremental -lib "secureip" -o "C:/Users/XingyouLee/OneDrive/Program/VHDL/lab5/mult_isim_beh.exe" -prj "C:/Users/XingyouLee/OneDrive/Program/VHDL/lab5/mult_beh.prj" "work.mult" 

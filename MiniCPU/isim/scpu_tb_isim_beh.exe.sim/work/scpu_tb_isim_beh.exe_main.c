@@ -14,13 +14,13 @@
 
 struct XSI_INFO xsi_info;
 
+char *IEEE_P_3620187407;
+char *IEEE_P_1242562249;
+char *STD_STANDARD;
 char *IEEE_P_2592010699;
 char *IEEE_P_3564397177;
-char *IEEE_P_1242562249;
-char *IEEE_P_3499444699;
-char *STD_STANDARD;
 char *STD_TEXTIO;
-char *IEEE_P_3620187407;
+char *IEEE_P_3499444699;
 
 
 int main(int argc, char **argv)
@@ -36,7 +36,6 @@ int main(int argc, char **argv)
     std_textio_init();
     ieee_p_3564397177_init();
     work_a_2530074510_0427617860_init();
-    work_a_3720894149_3895658771_init();
     work_a_1991350011_3212880686_init();
     work_a_4240026036_3212880686_init();
     work_a_1350853198_0427524003_init();
@@ -55,20 +54,21 @@ int main(int argc, char **argv)
     work_a_2900255942_3212880686_init();
     work_a_3538056418_3212880686_init();
     work_a_0564253557_3212880686_init();
+    work_a_3720894149_3895658771_init();
     work_a_0739323090_3212880686_init();
     work_a_3162238118_1637741553_init();
 
 
     xsi_register_tops("work_a_3162238118_1637741553");
 
+    IEEE_P_3620187407 = xsi_get_engine_memory("ieee_p_3620187407");
+    IEEE_P_1242562249 = xsi_get_engine_memory("ieee_p_1242562249");
+    STD_STANDARD = xsi_get_engine_memory("std_standard");
     IEEE_P_2592010699 = xsi_get_engine_memory("ieee_p_2592010699");
     xsi_register_ieee_std_logic_1164(IEEE_P_2592010699);
     IEEE_P_3564397177 = xsi_get_engine_memory("ieee_p_3564397177");
-    IEEE_P_1242562249 = xsi_get_engine_memory("ieee_p_1242562249");
-    IEEE_P_3499444699 = xsi_get_engine_memory("ieee_p_3499444699");
-    STD_STANDARD = xsi_get_engine_memory("std_standard");
     STD_TEXTIO = xsi_get_engine_memory("std_textio");
-    IEEE_P_3620187407 = xsi_get_engine_memory("ieee_p_3620187407");
+    IEEE_P_3499444699 = xsi_get_engine_memory("ieee_p_3499444699");
 
     return xsi_run_simulation(argc, argv);
 
