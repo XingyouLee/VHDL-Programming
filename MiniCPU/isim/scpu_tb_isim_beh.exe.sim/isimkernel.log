@@ -2,14 +2,14 @@ Command line:
    scpu_tb_isim_beh.exe
      -simmode  gui
      -simrunnum  0
-     -socket  5172
+     -socket  7571
 
-Tue May 04 15:31:47 2021
+Tue May 04 16:48:19 2021
 
 
- Elaboration Time: 0.09375 sec
+ Elaboration Time: 0.109375 sec
 
- Current Memory Usage: 5159.5 Meg
+ Current Memory Usage: 5159.46 Meg
 
  Total Signals          : 127
  Total Nets             : 661

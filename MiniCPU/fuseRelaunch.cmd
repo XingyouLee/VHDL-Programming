@@ -1,1 +1,1 @@
--intstyle "ise" -incremental -lib "secureip" -o "C:/Users/XingyouLee/OneDrive/Program/VHDL/MiniCPU/scpu_tb_isim_beh.exe" -prj "C:/Users/XingyouLee/OneDrive/Program/VHDL/MiniCPU/scpu_tb_beh.prj" "work.scpu_tb" 
+-intstyle "ise" -incremental -lib "secureip" -o "C:/Users/XingyouLee/OneDrive/Program/VHDL/MiniCPU/scpu_tb_isim_beh.exe" -prj "C:/Users/XingyouLee/OneDrive/Program/VHDL/MiniCPU/scpu_tb_beh.prj" "scpu_tb" 

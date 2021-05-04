@@ -84,11 +84,51 @@ LAB9:    goto LAB8;
 
 LAB11:    goto LAB9;
 
-LAB12:    goto LAB4;
+LAB12:    xsi_set_current_line(31, ng0);
+    t2 = (t0 + 2984);
+    t3 = (t2 + 56U);
+    t4 = *((char **)t3);
+    t5 = (t4 + 56U);
+    t6 = *((char **)t5);
+    *((unsigned char *)t6) = (unsigned char)3;
+    xsi_driver_first_trans_fast(t2);
+    xsi_set_current_line(32, ng0);
+    t7 = (50 * 1000LL);
+    t2 = (t0 + 2160);
+    xsi_process_wait(t2, t7);
+
+LAB18:    *((char **)t1) = &&LAB19;
+    goto LAB1;
 
 LAB13:    goto LAB12;
 
 LAB15:    goto LAB13;
+
+LAB16:    xsi_set_current_line(33, ng0);
+    t2 = (t0 + 2984);
+    t3 = (t2 + 56U);
+    t4 = *((char **)t3);
+    t5 = (t4 + 56U);
+    t6 = *((char **)t5);
+    *((unsigned char *)t6) = (unsigned char)2;
+    xsi_driver_first_trans_fast(t2);
+    xsi_set_current_line(34, ng0);
+    t7 = (50 * 1000LL);
+    t2 = (t0 + 2160);
+    xsi_process_wait(t2, t7);
+
+LAB22:    *((char **)t1) = &&LAB23;
+    goto LAB1;
+
+LAB17:    goto LAB16;
+
+LAB19:    goto LAB17;
+
+LAB20:    goto LAB4;
+
+LAB21:    goto LAB20;
+
+LAB23:    goto LAB21;
 
 }
 
@@ -109,7 +149,7 @@ LAB0:    t1 = (t0 + 2600U);
 
 LAB3:    goto *t2;
 
-LAB2:    xsi_set_current_line(36, ng0);
+LAB2:    xsi_set_current_line(40, ng0);
     t2 = (t0 + 3048);
     t3 = (t2 + 56U);
     t4 = *((char **)t3);
@@ -117,7 +157,7 @@ LAB2:    xsi_set_current_line(36, ng0);
     t6 = *((char **)t5);
     *((unsigned char *)t6) = (unsigned char)3;
     xsi_driver_first_trans_fast(t2);
-    xsi_set_current_line(37, ng0);
+    xsi_set_current_line(41, ng0);
     t7 = (20 * 1000LL);
     t2 = (t0 + 2408);
     xsi_process_wait(t2, t7);
@@ -125,7 +165,7 @@ LAB2:    xsi_set_current_line(36, ng0);
 LAB6:    *((char **)t1) = &&LAB7;
 
 LAB1:    return;
-LAB4:    xsi_set_current_line(38, ng0);
+LAB4:    xsi_set_current_line(42, ng0);
     t2 = (t0 + 3048);
     t3 = (t2 + 56U);
     t4 = *((char **)t3);
@@ -133,7 +173,7 @@ LAB4:    xsi_set_current_line(38, ng0);
     t6 = *((char **)t5);
     *((unsigned char *)t6) = (unsigned char)2;
     xsi_driver_first_trans_fast(t2);
-    xsi_set_current_line(39, ng0);
+    xsi_set_current_line(43, ng0);
 
 LAB10:    *((char **)t1) = &&LAB11;
     goto LAB1;

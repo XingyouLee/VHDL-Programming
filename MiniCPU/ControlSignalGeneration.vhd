@@ -45,14 +45,14 @@ end ControlSignalGeneration;
 architecture Behavioral of ControlSignalGeneration is
 begin
 	with op select
-		RegDst <= '1' when "000000",
-					'0' when "100011",
-					'X' when "101011",
-					'X' when "000100",
-					'0' when "000010",
-					'0' when "001111",
-					'0' when "001010",
-					'0' when "001000",
+		RegDst <= '1' when "000000", -- R type
+					'0' when "100011", -- lw
+					'X' when "101011", -- sw
+					'X' when "000100", -- beq
+					'0' when "000010", -- j
+					'0' when "001111", -- lui
+					'0' when "001010", -- slti
+					'0' when "001000", -- I type
 					'U' when others;
 	with op select
 		ALUSrc <= '0' when "000000",
@@ -126,13 +126,13 @@ begin
 					'U' when others;
 	with op select
 		ALUOp <= "111" when "000000",
-					"000" when "100011",
-					"000" when "101011",
-					"001" when "000100",
-					"000" when "000010",
-					"110" when "001111",
-					"010" when "001010",
-					"000" when "001000",
+					"000" when "100011", -- add
+					"000" when "101011", -- add
+					"001" when "000100", -- sub
+					"000" when "000010", -- add
+					"110" when "001111", -- shift
+					"010" when "001010", -- set less than
+					"000" when "001000", -- add
 					"UUU" when others;
 
 end Behavioral;
