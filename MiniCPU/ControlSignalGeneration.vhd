@@ -52,7 +52,7 @@ begin
 					'0' when "000010", -- j
 					'0' when "001111", -- lui
 					'0' when "001010", -- slti
-					'0' when "001000", -- I type
+					'0' when "001000", -- addi
 					'0' when "001011", -- sltiu
 					'U' when others;
 	with op select
@@ -140,9 +140,7 @@ begin
 					"000" when "000010", -- add
 					"110" when "001111", -- shift
 					"010" when "001010", -- slti
-					"000" when "001000", -- add
-					-- "010" when "101010", -- slt
-					-- "011" when "101011", -- sltu
+					"000" when "001000", -- addi
 					"111" when "001011", -- sltiu
 					"UUU" when others;
 					
