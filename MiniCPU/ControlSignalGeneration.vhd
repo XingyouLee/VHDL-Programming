@@ -141,7 +141,7 @@ begin
 					"110" when "001111", -- shift
 					"010" when "001010", -- slti
 					"000" when "001000", -- addi
-					"111" when "001011", -- sltiu
+					"010" when "001011", -- sltiu
 					"UUU" when others;
 					
 end Behavioral;

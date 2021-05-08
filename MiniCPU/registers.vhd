@@ -1,69 +1,92 @@
+----------------------------------------------------------------------------------
+-- Company: 
+-- Engineer: 
+-- 
+-- Create Date:    15:42:49 04/20/2015 
+-- Design Name: 
+-- Module Name:    registers - Behavioral 
+-- Project Name: 
+-- Target Devices: 
+-- Tool versions: 
+-- Description: 
+--
+-- Dependencies: 
+--
+-- Revision: 
+-- Revision 0.01 - File Created
+-- Additional Comments: 
+--
+----------------------------------------------------------------------------------
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.STD_LOGIC_ARITH.ALL;
+use IEEE.STD_LOGIC_UNSIGNED.ALL;
 
-use std.textio.all;
-library ieee;
-use ieee.std_logic_1164.all;
-use ieee.std_logic_unsigned.all;
-use ieee.std_logic_arith.all;
-
+---- Uncomment the following library declaration if instantiating
+---- any Xilinx primitives in this code.
+--library UNISIM;
+--use UNISIM.VComponents.all;
 
 entity registers is
-port (
-	clk: in std_logic;
-	reset: in std_logic;
-	ra1: in std_logic_vector(4 downto 0);
-	ra2: in std_logic_vector(4 downto 0);
-	wa: in std_logic_vector(4 downto 0);
-	rd1: out std_logic_vector(31 downto 0);
-	rd2: out std_logic_vector(31 downto 0);
-	wd: in std_logic_vector(31 downto 0);
-	we: in std_logic );
+    Port ( clk : in  STD_LOGIC;
+           reset : in  STD_LOGIC;
+           instruction : in  STD_LOGIC_VECTOR (31 downto 0);
+           wa : in  STD_LOGIC_VECTOR (4 downto 0);
+           rd1 : out  STD_LOGIC_VECTOR (31 downto 0); --
+           rd2 : out  STD_LOGIC_VECTOR (31 downto 0); --
+           wd : in  STD_LOGIC_VECTOR (31 downto 0); -- 
+           we : in  STD_LOGIC;
+			  regview_t1 : out STD_LOGIC_VECTOR (31 downto 0));
 end registers;
 
-architecture registers_arch of registers is
- 
+--wa = address : in  STD_LOGIC_VECTOR (4 downto 0);
+--we = Regwrite : in  STD_LOGIC;
+--wd = Data : in  STD_LOGIC_VECTOR (31 downto 0);
+--ra1 = rs : in  STD_LOGIC_VECTOR (4 downto 0);
+--ra2 = rt : in  STD_LOGIC_VECTOR (4 downto 0);
+--clk = clk : in  STD_LOGIC;
+--rd1 = Dataread1 : out  STD_LOGIC_VECTOR (31 downto 0);
+--rd2 = Dataread2 : out  STD_LOGIC_VECTOR (31 downto 0));
 
-  TYPE reg_data IS ARRAY (31 DOWNTO 0) OF std_logic_vector(31 DOWNTO 0);
-  TYPE reg_name IS ARRAY (31 DOWNTO 0) OF string(1 to 4);
-  
+architecture Behavioral of registers is
+TYPE register_file is array (0 to 31) of STD_LOGIC_VECTOR (31 DOWNTO 0);
+SIGNAL reg_file : register_file := ("00000000000000000000000000000000","UUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUU",
+												"UUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUU","UUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUU",
+												"UUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUU","UUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUU",
+												"UUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUU","UUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUU",
+												"UUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUU","UUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUU",
+												"UUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUU","UUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUU",
+												"UUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUU","UUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUU",
+												"UUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUU","UUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUU",
+												"UUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUU","UUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUU",
+												"UUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUU","UUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUU",
+												"UUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUU","UUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUU",
+												"UUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUU","UUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUU",
+												"UUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUU","UUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUU",
+												"UUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUU","UUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUU",
+												"UUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUU","UUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUU",
+												"UUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUU","UUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUU"
+												);
+SIGNAL ra1 :  STD_LOGIC_VECTOR (4 downto 0);
+SIGNAL ra2 :  STD_LOGIC_VECTOR (4 downto 0);
 begin
+ra1 <= instruction(25 downto 21);
+ra2 <= instruction(20 downto 16);
+rd1 <= reg_file(conv_integer(ra1));
+rd2 <= reg_file(conv_integer(ra2));
 
-	process (clk, reset, ra1, ra2, wa, wd, we)
-	--process (clk, reset)
-	variable VD : reg_data;
-	variable i: integer;
-	variable ra1i, ra2i, wai: integer;
-	variable good: boolean;
+PROCESS (clk, reset, we, wa, wd)
+begin
+if(reset='1') then
 
-	begin
+elsif (clk 'EVENT AND clk='1') then
+	regview_t1 <= reg_file(20);
+	if (we = '1') and (wa /= 0) then
+	  reg_file(conv_integer(wa)) <= wd;
+	end if;
+end if;
 
-		if (reset = '0') then
+end PROCESS;
 
-			wai := conv_integer(unsigned(wa));
-			ra1i := conv_integer(unsigned(ra1));
-			ra2i := conv_integer(unsigned(ra2));
-
-			if (clk = '1' and clk'event and we = '1') then -- write at the end of clk
-				-- if using tb, write beginning
-				-- if (we = '1') then -- write at the beginning of clk
-				VD(wai) := wd;
-			end if;
-			VD(0) := "00000000000000000000000000000000";
-
-			if (we = '1' and wa = ra1) then
-				rd1 <= wd;
-			else				
-				rd1 <= VD(ra1i);
-			end if;
-
-			if (we = '1' and wa = ra2) then
-				rd2 <= wd;
-			else						  
-				rd2 <= VD(ra2i);
-			end if;
-
-		end if;
-
-	end process;
-
-end registers_arch;
+end Behavioral;
 

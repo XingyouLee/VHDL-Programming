@@ -37,7 +37,7 @@ Compiling package std_logic_textio
 Compiling architecture imem_arch of entity imem [\imem("program.asc")(1,11)\]
 Compiling architecture behavioral of entity PC [pc_default]
 Compiling architecture behavioral of entity RegDst_mux [regdst_mux_default]
-Compiling architecture registers_arch of entity registers [registers_default]
+Compiling architecture behavioral of entity registers [registers_default]
 Compiling architecture behavioral of entity ALU_mux [alu_mux_default]
 Compiling architecture behavioral of entity ALU [alu_default]
 Compiling architecture behavioral of entity WriteData_mux [writedata_mux_default]
@@ -57,7 +57,8 @@ Compiling architecture dmem_arch of entity dmem [dmem_default]
 Compiling architecture behavioral of entity scpu_top [scpu_top_default]
 Compiling architecture scpu_tb_arch of entity scpu_tb
 Time Resolution for simulation is 1ps.
+Waiting for 3 sub-compilation(s) to finish...
 Compiled 50 VHDL Units
 Built simulation executable C:/Users/XingyouLee/OneDrive/Program/VHDL/MiniCPU/scpu_tb_isim_beh.exe
-Fuse Memory Usage: 69412 KB
-Fuse CPU Usage: 3327 ms
+Fuse Memory Usage: 42148 KB
+Fuse CPU Usage: 1343 ms

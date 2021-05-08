@@ -64,8 +64,7 @@ end component;
 component registers 
     port ( clk: in std_logic;
            reset: in std_logic;
-           ra1: in std_logic_vector(4 downto 0);
-           ra2: in std_logic_vector(4 downto 0);
+		   instruction : in  STD_LOGIC_VECTOR (31 downto 0);
            wa: in std_logic_vector(4 downto 0);
            rd1: out std_logic_vector(31 downto 0);
            rd2: out std_logic_vector(31 downto 0);
@@ -213,13 +212,12 @@ RegDst_mux2 : RegDst_mux port map(
 registers3 : registers port map(
 			clk => clk,
 			reset => reset,
-			ra1 => idata(25 downto 21),
-			ra2 => idata(20 downto 16),
 			wa => out_2_to_3,
 			rd1 => out_3_to_5,
 			rd2 => out_3_to_4,
 			wd => out_6_to_3,
-			we => out_9_to_3
+			we => out_9_to_3,
+			instruction => idata
 );
 
 ALU_mux4 : ALU_mux port map(

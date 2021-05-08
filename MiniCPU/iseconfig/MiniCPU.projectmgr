@@ -78,13 +78,13 @@
          <ClosedNodesVersion>2</ClosedNodesVersion>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem>scpu_tb - scpu_tb_arch (C:/Users/XingyouLee/OneDrive/Program/VHDL/MiniCPU/scpu_tb.vhd)</SelectedItem>
+         <SelectedItem>ControlSignalGeneration9 - ControlSignalGeneration - Behavioral (C:/Users/XingyouLee/OneDrive/Program/VHDL/MiniCPU/ControlSignalGeneration.vhd)</SelectedItem>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >1</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
       <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000202000000010000000100000064000002ac000000020000000000000000000000000200000064ffffffff000000810000000300000002000002ac0000000100000003000000000000000100000003</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
-      <CurrentItem>scpu_tb - scpu_tb_arch (C:/Users/XingyouLee/OneDrive/Program/VHDL/MiniCPU/scpu_tb.vhd)</CurrentItem>
+      <CurrentItem>ControlSignalGeneration9 - ControlSignalGeneration - Behavioral (C:/Users/XingyouLee/OneDrive/Program/VHDL/MiniCPU/ControlSignalGeneration.vhd)</CurrentItem>
    </ItemView>
    <ItemView engineview="BehavioralSim" sourcetype="" guiview="Process" >
       <ClosedNodes>
@@ -105,12 +105,12 @@
          <ClosedNodesVersion>1</ClosedNodesVersion>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem>ISim Simulator</SelectedItem>
+         <SelectedItem></SelectedItem>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
       <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000000f8000000010000000100000000000000000000000064ffffffff000000810000000000000001000000f80000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
-      <CurrentItem>ISim Simulator</CurrentItem>
+      <CurrentItem></CurrentItem>
    </ItemView>
 </Project>

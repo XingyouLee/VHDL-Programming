@@ -43,14 +43,14 @@ begin
 	ALUcontrol <= "000" when (ALUOp = "000") else --lw sw j -add
 						"001" when (ALUOp = "001") else --beq -sub
 						"010" when (ALUOp = "010") else --slti
-						"010" when (ALUOp = "111") else --sltiu
+						"010" when (ALUOp = "010") else --sltiu
 						"110" when (ALUOp = "110") else --s16
 						"000" when (ALUOp = "111")and (funct = "100000") else --R type--add
 						"001" when (ALUOp = "111")and (funct = "100010") else --R type--sub
-						"010" when (ALUOp = "111")and (funct = "101010") else --R type--slt
+						"011" when (ALUOp = "111")and (funct = "101010") else --R type--slt
 						"100" when (ALUOp = "111")and (funct = "100100") else --R type--and
 						"101" when (ALUOp = "111")and (funct = "100101") else --R type--or
-						"101" when (ALUOp = "111")and (funct = "101011") else --R type--sltu
+						"011" when (ALUOp = "111")and (funct = "101011") else --R type--sltu
 						"UUU";
 end Behavioral;
 

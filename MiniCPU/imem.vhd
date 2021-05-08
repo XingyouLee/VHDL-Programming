@@ -7,7 +7,7 @@ use ieee.std_logic_textio.all;
 
 entity imem is
 generic (
-	datafile: string := "test01.asc" );
+	datafile: string := "program.asc" );
 port (  clk: in std_logic;
 	reset: in std_logic;
 	iaddr: in std_logic_vector(31 downto 0);
@@ -17,20 +17,20 @@ end imem;
 architecture imem_arch of imem is
 
 	constant mbegin: natural := 0;				-- in #word
-	constant mend: natural := 16384*16-1;			-- in #word, 16K Words = 64K Bytes
+	constant mend: natural := 16384-1;			-- in #word, 16K Words = 64K Bytes
 	constant ibegin: natural := 4096;			-- in #word, 0x4000/4
 	subtype word is std_logic_vector(31 downto 0);
 	type memory is array (natural range mbegin to mend) of word;
 
 begin
-	
+
 	--process (clk, reset, iaddr)
    process
 		variable mem: memory;
 		variable ia: natural;
 
 		procedure load(mem: out memory) is
-			file ifile: text is in "test01.asc";
+			file ifile: text is in "program.asc";
 			variable l: line;
 			variable c: character;
 			variable d: std_logic_vector(31 downto 0);
@@ -100,11 +100,11 @@ begin
 			--wait for 1 ns;
 			if (reset = '0') then
 				if (iaddr > (mend+1)*4-4 or iaddr < mbegin*4) then
-					write(output, "iaddr out of range");
+					--write(output, "iaddr out of range");
 					assert false severity failure;
 				end if;
 				if (iaddr(1 downto 0) /= "00") then
-					write(output, "iaddr unaligned access");
+					--write(output, "iaddr unaligned access");
 					assert false severity failure;
 				end if;
 			end if;

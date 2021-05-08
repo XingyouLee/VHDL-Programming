@@ -49,8 +49,8 @@ begin
 			(A - B) when (ALUcontrol = "001") else
 			"00000000000000000000000000000001" when ((ALUcontrol = "010") and(A < B)) else
 			"00000000000000000000000000000000" when ((ALUcontrol = "010") and(A >= B)) else
-			"00000000000000000000000000000001" when ((ALUcontrol = "101") and(unsigned(A) < unsigned(B))) else
-			"00000000000000000000000000000000" when ((ALUcontrol = "101") and(unsigned(A) >= unsigned(B))) else
+			"00000000000000000000000000000001" when ((ALUcontrol = "011") and(unsigned(A) < unsigned(B))) else
+			"00000000000000000000000000000000" when ((ALUcontrol = "011") and(unsigned(A) >= unsigned(B))) else
 			(A and B) when (ALUcontrol = "100") else
 			(A or B) when (ALUcontrol = "101") else
 			(B(15 downto 0) & "0000000000000000") when (ALUcontrol = "110") else
