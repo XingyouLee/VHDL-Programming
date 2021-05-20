@@ -124,6 +124,7 @@ BEGIN
 	begin
 	wait for 2ns;
 	reset <= '1';
+  reset <= '0';
 	op <= "000000";
 	wait for 8ns;
 	reset <= '0';

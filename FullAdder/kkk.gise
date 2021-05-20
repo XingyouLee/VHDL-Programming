@@ -107,7 +107,11 @@
     <transform xil_pn:end_ts="1611908043" xil_pn:in_ck="-7657297210431104123" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1611908043">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <outfile xil_pn:name="FA.vhd"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputChanged"/>
+      <status xil_pn:value="OutputChanged"/>
+      <outfile xil_pn:name="myFA.vhd"/>
       <outfile xil_pn:name="myHA.vhd"/>
       <outfile xil_pn:name="myand.vhd"/>
       <outfile xil_pn:name="myor.vhd"/>
@@ -128,7 +132,12 @@
     <transform xil_pn:end_ts="1611908043" xil_pn:in_ck="-7657297210431104123" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1611908043">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <outfile xil_pn:name="FA.vhd"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputChanged"/>
+      <status xil_pn:value="OutputChanged"/>
+      <outfile xil_pn:name="myFA.vhd"/>
       <outfile xil_pn:name="myHA.vhd"/>
       <outfile xil_pn:name="myand.vhd"/>
       <outfile xil_pn:name="myor.vhd"/>
@@ -137,6 +146,9 @@
     <transform xil_pn:end_ts="1611921739" xil_pn:in_ck="-7657297210431104123" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="3087958265633633155" xil_pn:start_ts="1611921734">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="InputChanged"/>
       <outfile xil_pn:name="fuse.log"/>
       <outfile xil_pn:name="isim"/>
       <outfile xil_pn:name="myFA_beh.prj"/>
@@ -146,6 +158,7 @@
     <transform xil_pn:end_ts="1620122780" xil_pn:in_ck="-8205112635327097055" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="-4129260275692229040" xil_pn:start_ts="1620122780">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
       <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="isim.cmd"/>
@@ -183,7 +196,9 @@
     <transform xil_pn:end_ts="1611908002" xil_pn:in_ck="-7657297210431104123" xil_pn:name="TRANEXT_xstsynthesize_virtex6" xil_pn:prop_ck="5615799757640089789" xil_pn:start_ts="1611907982">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputChanged"/>
       <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="_xmsgs/xst.xmsgs"/>
       <outfile xil_pn:name="myFA.lso"/>
@@ -206,6 +221,7 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
       <outfile xil_pn:name="_ngo"/>
       <outfile xil_pn:name="_xmsgs/ngdbuild.xmsgs"/>
       <outfile xil_pn:name="myFA.bld"/>

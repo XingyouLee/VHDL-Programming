@@ -154,6 +154,7 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForProperties"/>
       <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="InputChanged"/>
       <outfile xil_pn:name="convert_g_to_b_beh.prj"/>
@@ -165,6 +166,7 @@
     <transform xil_pn:end_ts="1613217435" xil_pn:in_ck="838251909098734455" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="-3449413342425481942" xil_pn:start_ts="1613217435">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForProperties"/>
       <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
       <status xil_pn:value="OutputChanged"/>

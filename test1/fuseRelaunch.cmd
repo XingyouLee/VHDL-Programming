@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "secureip" -o "C:/Users/XingyouLee/OneDrive/Program/VHDL/test1/atest_isim_beh.exe" -prj "C:/Users/XingyouLee/OneDrive/Program/VHDL/test1/atest_beh.prj" "work.atest" 

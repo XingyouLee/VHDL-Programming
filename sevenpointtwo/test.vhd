@@ -2,9 +2,9 @@
 -- Company: 
 -- Engineer: 
 -- 
--- Create Date:    15:17:26 01/29/2021 
+-- Create Date:    14:32:15 03/05/2021 
 -- Design Name: 
--- Module Name:    myadd - Behavioral 
+-- Module Name:    acc - Behavioral 
 -- Project Name: 
 -- Target Devices: 
 -- Tool versions: 
@@ -19,7 +19,8 @@
 ----------------------------------------------------------------------------------
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
-
+use IEEE.STD_LOGIC_UNSIGNED.ALL;
+use IEEE.STD_LOGIC_ARITH.ALL;
 -- Uncomment the following library declaration if using
 -- arithmetic functions with Signed or Unsigned values
 --use IEEE.NUMERIC_STD.ALL;
@@ -29,17 +30,36 @@ use IEEE.STD_LOGIC_1164.ALL;
 --library UNISIM;
 --use UNISIM.VComponents.all;
 
-entity myand is
-    Port ( A : in  STD_LOGIC;
-           B : in  STD_LOGIC;
-           C : out  STD_LOGIC);
-end myadd;
+entity acc is
+    Port ( A : in  STD_LOGIC_VECTOR (7 downto 0);
+           S : out  STD_LOGIC_VECTOR (15 downto 0);
+           clk, reset : in  STD_LOGIC);
+end acc;
 
-architecture Behavioral of myand is
+architecture Behavioral of acc is
+
+signal partial_Sum: STD_LOGIC_VECTOR (7 downto 0) := "00000000";
+signal i: STD_LOGIC_VECTOR (7 downto 0) := (others=>'0');
+
+
 
 begin
 
-	C<=A and B;
+
+process(clk, reset)
+	begin
+	if (reset = '1') then
+		i <= "00000000";
+			partial_Sum <= (others=>'0');
+				
+			if ((clk = '1' and clk'event) and (i <= "00001111")) then
+				partial_Sum <= partial_Sum + A*i;
+				i <= i+1;
+			end if;
+	end if;
 	
+end process;
+S <= partial_Sum;
+
 end Behavioral;
 

@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "secureip" -o "C:/Users/XingyouLee/OneDrive/Program/VHDL/divider/asdfcad_isim_beh.exe" -prj "C:/Users/XingyouLee/OneDrive/Program/VHDL/divider/asdfcad_beh.prj" "work.asdfcad" 
